@@ -1,6 +1,9 @@
 from django.db import models
 from django.contrib import admin
-from django.conf.urls.defaults import patterns, url
+try:
+  from django.conf.urls import patterns, url
+except:
+  from django.conf.urls.defaults import patterns, url
 from genericadmin.views import generic_lookup
 
 class Lookup(models.Model):
